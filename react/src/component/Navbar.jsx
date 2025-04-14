@@ -5,9 +5,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { MdLocalShipping } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiLogIn } from "react-icons/fi";
+import { CiLogout, CiUser } from "react-icons/ci";
 
 const Navbar = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   return (
     <>
       {/* header */}
@@ -41,21 +42,71 @@ const Navbar = () => {
               w-[250px] bg-gray-100
               "
             />
-            <button
-              onClick={() => loginWithRedirect()}
-              className="bg-primary cursor-pointer py-2 px-2 rounded-sm text-white text-bold hover:bg-brandYellow hover:text-primary"
-            >
+            <button className="bg-primary cursor-pointer py-2 px-2 rounded-sm text-white text-bold hover:bg-brandYellow hover:text-primary">
               <AiOutlineSearch />
             </button>
           </div>
-          {/* user */}
-          <div className="flex gap-2 mr-4 pr-6">
-            <div className="mx-1 my-1">
-              <FiLogIn />
+
+          {isAuthenticated ? (
+            // if user is login then logout button will be shown
+            <div className="flex gap-2 mr-4 pr-6">
+              <div className="mx-1 my-1">
+                <CiLogout />
+              </div>
+              <div>
+                <button
+                  onClick={() =>
+                    logout({
+                      logoutParams: { returnTo: window.location.origin },
+                    })
+                  }
+                  className="text-brandBlue cursor-pointer"
+                >
+                  Logout
+                </button>
+              </div>
             </div>
-            <div>
-              <button className="text-brandBlue">Login</button>
+          ) : (
+            // if user is not login then login button will be shown
+            <div className="flex gap-2 mr-4 pr-6">
+              <div className="mx-1 my-1">
+                <FiLogIn />
+              </div>
+              <div>
+                <button
+                  onClick={() => loginWithRedirect()}
+                  className="text-brandBlue cursor-pointer"
+                >
+                  Login
+                </button>
+              </div>
             </div>
+          )}
+        </div>
+        {/* last header */}
+        <div>
+          {/* user profile */}
+          <div>
+            {isAuthenticated ? (
+              <>
+                <div>
+                  <CiUser className="text-2xl" />
+                </div>
+                <div>
+                  <h2 className="text-2xl bold">{user.name}</h2>
+                  <p>{user.email}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div>
+                  <CiUser className="text-2xl" />
+                </div>
+                <div>
+                  <p>Please Login</p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
