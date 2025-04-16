@@ -6,6 +6,35 @@ import { MdLocalShipping } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiLogIn } from "react-icons/fi";
 import { CiLogout, CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
+
+const NavLink = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
+    name: "Shop",
+    link: "/shop",
+  },
+  {
+    id: 3,
+    name: "Collection",
+    link: "/collection",
+  },
+  {
+    id: 4,
+    name: "About",
+    link: "/about",
+  },
+  {
+    id: 5,
+    name: "Contact",
+    link: "/contact",
+  },
+];
 
 const Navbar = () => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
@@ -84,17 +113,17 @@ const Navbar = () => {
           )}
         </div>
         {/* last header */}
-        <div>
+        <div className="w-full py-1 px-1 flex bg-gray-800 justify-between ">
           {/* user profile */}
-          <div>
+          <div className="flex mt-2">
             {isAuthenticated ? (
               <>
-                <div>
-                  <CiUser className="text-2xl" />
+                <div className="py-1 px-1 bg-white rounded-[10px] mr-1">
+                  <CiUser className="text-2xl pt-1" />
                 </div>
-                <div>
-                  <h2 className="text-2xl bold">{user.name}</h2>
-                  <p>{user.email}</p>
+                <div className="ml-1">
+                  <h2 className="text-[18px] bold text-white">{user.name}</h2>
+                  <p className="text-gray-400 text-[14px]">{user.email}</p>
                 </div>
               </>
             ) : (
@@ -107,6 +136,25 @@ const Navbar = () => {
                 </div>
               </>
             )}
+          </div>
+          {/* Nav */}
+          {/* <div className="mt-2">
+            <ul className="flex gap-20 text-gray-300 "> */}
+          <ul className="flex justify-center items-center gap-12 text-xl bold py-1 px-1">
+            {NavLink.map((item) => (
+              <div className="mt-2">
+                <li key={item.id} className="  text-gray-300">
+                  <Link to={item.link}>{item.name}</Link>
+                </li>
+              </div>
+            ))}
+          </ul>
+
+          {/* offer? */}
+          <div className="my-2 mr-2 py-2 px-2 bg-brandYellow rounded-md text-center">
+            <p className="mt-1 uppercase text-gray-950 text-lg bold">
+              flat 10% over all iphone
+            </p>
           </div>
         </div>
       </div>
