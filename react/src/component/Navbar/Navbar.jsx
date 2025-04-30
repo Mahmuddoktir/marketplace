@@ -1,5 +1,5 @@
 import React from "react";
-import ImgLogo from "../assets/logo.jpg";
+import ImgLogo from "../../assets/logo.jpg";
 import { useAuth0 } from "@auth0/auth0-react";
 // react icons
 import { MdLocalShipping } from "react-icons/md";
@@ -142,8 +142,8 @@ const Navbar = () => {
             <ul className="flex gap-20 text-gray-300 "> */}
           <ul className="flex justify-center items-center gap-12 text-xl bold py-1 px-1">
             {NavLink.map((item) => (
-              <div className="mt-2">
-                <li key={item.id} className="  text-gray-300">
+              <div className="mt-2" key={item.id}>
+                <li className="  text-gray-300">
                   <Link to={item.link}>{item.name}</Link>
                 </li>
               </div>

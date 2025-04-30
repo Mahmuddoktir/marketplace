@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant container (&:where(.container, .container *));
+/* @custom-variant container (&:where(.container, .container *)); */
 
 @theme {
   --color-primary: #f42c37;
@@ -14,9 +14,9 @@
 .dark {
   background-color: #1e1e1e;
 }
-
+/* 
 @layer components {
   .container {
     @apply p-1 sm:p-3 mx-auto;
   }
-}
+} */

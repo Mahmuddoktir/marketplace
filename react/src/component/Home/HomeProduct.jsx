@@ -1,0 +1,208 @@
+import ProductImg1 from "../../assets/product/p-1.jpg";
+import ProductImg2 from "../../assets/product/p-2.jpg";
+import ProductImg3 from "../../assets/product/p-3.jpg";
+import ProductImg4 from "../../assets/product/p-4.jpg";
+import ProductImg5 from "../../assets/product/p-5.jpg";
+import ProductImg6 from "../../assets/product/p-6.jpg";
+import ProductImg7 from "../../assets/product/p-7.jpg";
+
+const HomeProduct = [
+  {
+    id: 1,
+    title: "Apple Watch",
+    price: 100,
+    image: ProductImg1,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 2,
+    title: "Apple Watch",
+    price: 200,
+    image: ProductImg2,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 3,
+    title: "Apple Watch",
+    price: 300,
+    image: ProductImg3,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 4,
+    title: "Apple Watch",
+    price: 400,
+    image: ProductImg4,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 5,
+    title: "Apple Watch",
+    price: 500,
+    image: ProductImg5,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 6,
+    title: "Apple Watch",
+    price: 600,
+    image: ProductImg6,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 7,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 8,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 9,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 10,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 11,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 12,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "top",
+  },
+];
+
+const BannerProduct = [
+  {
+    id: 1,
+    title: "Apple Watch",
+    price: 100,
+    image: ProductImg1,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 2,
+    title: "Apple Watch",
+    price: 200,
+    image: ProductImg2,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 3,
+    title: "Apple Watch",
+    price: 300,
+    image: ProductImg3,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 4,
+    title: "Apple Watch",
+    price: 400,
+    image: ProductImg4,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 5,
+    title: "Apple Watch",
+    price: 500,
+    image: ProductImg5,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 6,
+    title: "Apple Watch",
+    price: 600,
+    image: ProductImg6,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 7,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 8,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "new",
+  },
+  {
+    id: 9,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 10,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "top",
+  },
+  {
+    id: 11,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "featured",
+  },
+  {
+    id: 11,
+    title: "Apple Watch",
+    price: 700,
+    image: ProductImg7,
+    cat: "",
+    type: "featured",
+  },
+];
+
+export default HomeProduct;
+export { BannerProduct };
