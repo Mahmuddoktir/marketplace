@@ -1,10 +1,8 @@
 import ProductImg1 from "../../assets/product/p-1.jpg";
 import ProductImg2 from "../../assets/product/p-2.jpg";
-import ProductImg3 from "../../assets/product/p-3.jpg";
 import ProductImg4 from "../../assets/product/p-4.jpg";
 import ProductImg5 from "../../assets/product/p-5.jpg";
-import ProductImg6 from "../../assets/product/p-6.jpg";
-import ProductImg7 from "../../assets/product/p-7.jpg";
+
 import ProductImg8 from "../../assets/product/p-8.jpg";
 
 const HomeProduct = [
@@ -47,7 +45,7 @@ const HomeProduct = [
     price: 400,
     image: ProductImg4,
     cat: "",
-    type: "new",
+    type: "featured",
   },
   {
     id: 6,
@@ -59,9 +57,9 @@ const HomeProduct = [
   },
   {
     id: 7,
-    name: "iPhone 12 Pro Max",
+    name: "Apple Watch",
     price: 400,
-    image: ProductImg6,
+    image: ProductImg2,
     cat: "",
     type: "new",
   },
@@ -72,7 +70,7 @@ const HomeProduct = [
     price: 400,
     image: ProductImg8,
     cat: "",
-    type: "new",
+    type: "top",
   },
 ];
 

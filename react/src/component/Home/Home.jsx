@@ -12,6 +12,14 @@ import HeroImg from "../../assets/hero/heroImg.png";
 const Home = () => {
   const [trendingProduct, setTrendingProduct] = useState(HomeProduct);
 
+  // filter of trending product
+  const filtercate = (x) => {
+    const filterProduct = HomeProduct.filter((curElm) => {
+      return curElm.type === x;
+    });
+    setTrendingProduct(filterProduct);
+  };
+
   return (
     <>
       {/* home */}
@@ -63,13 +71,22 @@ const Home = () => {
                 </div>
                 {/* cate */}
                 <div className="mt-2 flex gap-10 font-semibold capitalize cursor-pointer text-[14px] ">
-                  <h3 className="scale-105 hover:text-primary duration-500">
+                  <h3
+                    onClick={() => filtercate("new")}
+                    className="scale-105 hover:text-primary duration-500"
+                  >
                     New
                   </h3>
-                  <h3 className="scale-105 hover:text-primary duration-500">
+                  <h3
+                    onClick={() => filtercate("featured")}
+                    className="scale-105 hover:text-primary duration-500"
+                  >
                     Featured
                   </h3>
-                  <h3 className="scale-105 hover:text-primary duration-500">
+                  <h3
+                    onClick={() => filtercate("top")}
+                    className="scale-105 hover:text-primary duration-500"
+                  >
                     top selling
                   </h3>
                 </div>
@@ -96,6 +113,18 @@ const Home = () => {
                                 <FaHeart />
                               </div>
                             </div>
+                          </div>
+                          {/* info */}
+                          <div className="py-4 px-4 ml-4">
+                            <h3 className="uppercase text-sm text-primary font-semibold tracking-wider">
+                              {curElm.name}
+                            </h3>
+                            <p className="text-primary/70 mt-3 text-sm tracking-wider">
+                              ${curElm.price}
+                            </p>
+                            <button className="cursor-pointer mt-2 items-center py-1 px-5 bg-brandYellow hover:bg-primary hover:text-white hover:scale-105 duration-500  rounded-md">
+                              Add To Cart
+                            </button>
                           </div>
                         </div>
                       </>
